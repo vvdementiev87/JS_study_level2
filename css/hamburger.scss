@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    width: 100%;
+    background-color: #252525;
+    text-align: end;
+    color: #fafafa;
+    &__wrap {
+        align-items: center;
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__logo {
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1024px;
+}
+
+.product{
+    &__list{
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        width: 100%;
+        border: 1px solid #252525;
+    }
+    &__size{
+        margin: 20px;
+        padding: 10px;
+    }
+}

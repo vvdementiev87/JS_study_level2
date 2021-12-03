@@ -51,11 +51,11 @@ class ProductItem {
 class Cart {
     constructor(container = '.cart__count') {
         this.container = container;
-        this.addProduct();
-        this.deleteProduct();
-        this.drawCart();
-        this.totalSumCount();
-        this.cartHiddenToggle();
+        this.addProduct(); //добавление продукта в корзину
+        this.deleteProduct(); //Удаление продукта из корзины
+        this.drawCart(); //Прорисовка строк корзины
+        this.totalSumCount();// подсчет и прорисовка общей стоимости продуктов в корзине
+        this.cartHiddenToggle();//отображение/скрытие списка корзины
     }
     cartHiddenToggle() {
         document.querySelector(this.container).classList.toggle('cart__hidden');
@@ -69,18 +69,16 @@ class Cart {
 
 class ProductInCart {
     constructor() {
-        this.productInCart = [];
-        this.drawNewCartRow();
-        this.updateCartRow();
+        this.productInCart = []; //массив продуктов в корзине
+        this.drawNewCartRow(); //прорисовка строки с новым продуктом, добавленным в корзину
+        this.updateCartRow(); // обнавление количества продуктов одного типа в корзине
     }
     drawNewCartRow() {}
     updateCartRow() {}
 }
 
-
 let productList = new ProductList;
 console.log(productList.totalSum());
-
 
 let cart = new Cart;
 document.querySelector('.cart__button').addEventListener('click', function() {
