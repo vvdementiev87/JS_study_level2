@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/hamburger.css">
+    <title>Hamberger calculator</title>
+</head>
+
+<body>
+    <header class="header">
+    </header>
+    <main>
+        <div class="product__list container">
+            <div class="product__wrap">
+                <p>Конструктор гамбургера</p>
+                <div class="product__size">
+                    <p>Укажите размер гамбургера</p>
+                    <input type="radio" name="hamSize" id="Small" required><label for="Small" class="product__size">Малый</label>
+                    <input type="radio" name="hamSize" id="Large"><label for="Large" class="product__size">Большой</label>
+                </div>
+                <div class="product__size">
+                    <p>Выберети наполнители</p>
+                    <input type="radio" name="topping" id="cheeze" required><label for="cheeze" class="product__size">Сыр</label>
+                    <input type="radio" name="topping" id="salat"><label for="salate" class="product__size">Салат</label>
+                    <input type="radio" name="topping" id="potato"><label for="potato" class="product__size">Картофель</label>
+                </div>
+                <div class="product__size">
+                    <p>Выберети соус</p>
+                    <input type="checkbox" name="stuffing" id="spice"><label for="spice" class="product__size">Приправа</label>
+                    <input type="checkbox" name="stuffing" id="mayo"><label for="mayo" class="product__size">Майонез</label>
+                </div>
+                <button class="product__btn" id='calculate'>Расчет</button>
+            </div>
+            <div class="product__result">
+                <p>Стоимость: <span class="priceCount"></span></p>
+                <p>Каллорийность: <span class="calCount"></span></p>
+            </div>
+        </div>
+    </main>
+    <script src="JS/hamburger.js"></script>
+</body>
+
+</html>
