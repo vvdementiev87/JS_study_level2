@@ -120,7 +120,7 @@ class Cart {
     totalSum() {
         let totalSum = 0;
         for (let item of this.goods) {
-            totalSum += item.price;
+            totalSum += item.price * item.quantity;
         }
         return totalSum
     }
@@ -151,7 +151,7 @@ class ProductInCart {
         <div class="cart__row--element">${this.title}</div>
         <div class="cart__row--element"><span class="productCount" data-productId="${this.id}">${this.quantity}</span> шт.</div>
         <div class="cart__row--element">$${this.price}</div>
-        <div class="cart__row--element">$<span class="productCountTotal" data-productId="${this.id}">${this.price}</span></div>
+        <div class="cart__row--element">$<span class="productCountTotal" data-productId="${this.id}">${(this.price*this.quantity)}</span></div>
         <div class="cart__row--element"><button class="delete__btn" data-id="${this.id}">&#x2715</button></div>
         </div>`
     }
