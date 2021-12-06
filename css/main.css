@@ -46,11 +46,16 @@
 }
 .cart__row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #ebebeb;
   padding-bottom: 10px;
+}
+.cart__row--element {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .cart__header {
   font-weight: bold;
@@ -84,6 +89,22 @@
   cursor: pointer;
 }
 .buy__btn:hover {
+  background-color: transparent;
+  border-color: #2f2a2d;
+  color: #2f2a2d;
+}
+
+.delete__btn {
+  padding: 5px;
+  width: 25px;
+  background-color: #2f2a2d;
+  border: 1px solid transparent;
+  color: #fafafa;
+  border-radius: 5px;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+}
+.delete__btn:hover {
   background-color: transparent;
   border-color: #2f2a2d;
   color: #2f2a2d;
