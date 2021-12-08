@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -25,9 +26,30 @@
         Two: 'I'll see you next time.'
         One: 'Sure. Bye.'
     </p>
+    <form class="test__form" action="#">
+        <div class="test__input">
+            <label for="name">Name: </label><input id="name" type="text">
+        </div>
+        <div class="test__input">
+            <label for="tel">Telephone number: </label><input id="tel" type="text">
+        </div>
+        <div class="test__input">
+            <label for="mail">Email: </label><input id="mail" type="email">
+        </div>
+        <div class="test__input">
+            <label for="sometext">Text: </label><input id="sometext" type="text">
+        </div>         
+         <button type="submit">Отправить</button>
+    </form>
     <script>
       let p=document.querySelector('p').textContent;      
-      console.log(p.replace(/\B'/g,'"'));  
+      console.log(p.replace(/\B'/g,'"'));
+      let form=document.querySelector('.test__form')
+      form.addEventListener('submit',event=>{
+          event.defaultPrevented;
+          console.log(event.srcElement);
+          console.log(event);
+      })
 
     </script>
 </body>
