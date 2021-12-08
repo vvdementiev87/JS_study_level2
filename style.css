@@ -29,4 +29,12 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+
+.test__red {
+  border: 2px solid red;
+}
+
+.test__red:focus {
+  background-color: rgba(255, 0, 0, 0.3);
+}
 /*# sourceMappingURL=style.css.map */

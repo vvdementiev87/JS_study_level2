@@ -47,6 +47,16 @@
       let form=document.querySelector('.test__form')
       form.addEventListener('submit',event=>{
           event.defaultPrevented;
+          let inputName=document.getElementById('name');
+          inputName.classList.remove('test__red');
+          if (!inputName.value.match(/[a-zа-я]/iu)){
+            inputName.classList.add('test__red');
+          }
+          let inputTel=document.getElementById('tel');
+          inputTel.classList.remove('test__red');
+          if (!inputTel.value.match(/^\\+\d{1}\\(\d{3}\\)d{3}\\-\d{4}$/iu)){
+            inputTel.classList.add('test__red');
+          }
           console.log(event.srcElement);
           console.log(event);
       })
