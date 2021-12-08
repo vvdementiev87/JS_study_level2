@@ -1,0 +1,40 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.test__form {
+  margin-top: 50px;
+  padding: 10px;
+  border: 2px solid #000;
+  max-width: 400px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.test__input {
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.test__red {
+  border: 2px solid red;
+}
+
+.test__red:focus {
+  background-color: rgba(255, 0, 0, 0.3);
+}
+/*# sourceMappingURL=style.css.map */
