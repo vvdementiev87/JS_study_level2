@@ -8,33 +8,43 @@
     <link rel="stylesheet" href="css/main.css">
     <title>eShop</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    <script src="JS/script-vue.js"></script>
 </head>
 
 <body>
-    <header id="app" class="header">
-        <div class="header__wrap container">
-            <div class="header__logo">E-shop</div>
-            <button class="cart__button" type="button">Корзина</button>
-            <div class="cart__count">
-                <div class="cart__row cart__header">
-                    <div>Название товара</div>
-                    <div>Количество</div>
-                    <div>Цена за шт.</div>
-                    <div>Итого</div>
-                    <div>Удалить</div>
-                </div>
-                <div class="cart__main"></div>
-                <div class="cart__footer">
-                    Товаров в корзине на сумму: $
-                    <span class="cart__total">0</span>
+    <div id="app">
+        <header class="header">
+            <div class="header__wrap container">
+                <div class="header__logo">E-shop</div>
+                <button class="cart__button" type="button">Корзина</button>
+                <div class="cart__count">
+                    <div class="cart__row cart__header">
+                        <div>Название товара</div>
+                        <div>Количество</div>
+                        <div>Цена за шт.</div>
+                        <div>Итого</div>
+                        <div>Удалить</div>
+                    </div>
+                    <div class="cart__main"></div>
+                    <div class="cart__footer">
+                        Товаров в корзине на сумму: $
+                        <span class="cart__total">0</span>
+                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <main>
-        <div class="products__list container"></div>
-    </main>
-    <script src="JS/script-vue.js"></script>
+        </header>
+        <main>
+            <div class="products__list container">
+                <div class="products__item" v-for="product of products" :key="product.id_product">
+                    <img class="products__img" :src="images/product.id_product">
+                    <h3>{{product.product_name}}</h3>
+                    <p>{{product.price}}</p>
+                    <button class="buy__btn" :data-id="prodict.id_product" @click="addProduct(product)">Купить</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
 </body>
 
 </html>
