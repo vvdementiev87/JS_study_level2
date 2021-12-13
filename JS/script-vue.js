@@ -7,13 +7,19 @@ const app = new Vue({
         catalogUrl: 'catalogData.json',
         products: [],
         filtered: [],
+        imageCatalog: 'images/img123.png',
         userSearch: '',
-        show: false
+        show: false,
+        isVisibleCart: true,
+        productsInCart: [],
+        cartEmpty: true,
     },
     methods: {
         filter(value) {
-            const regexp = new RegExp(value, 'i');
-            this.filtered = this.products.filter(product => regexp.test(product.product_name));
+            const regexp = new RegExp(this.userSearch, 'i');
+            this.filtered = this.products.filter(product => {
+                return (regexp.test(product.product_name) || regexp.test(product.price));
+            });
         },
         getJson(url) {
             return fetch(url)
@@ -25,12 +31,14 @@ const app = new Vue({
         addProduct(product) {
             console.log(product.id_product);
         }
+
     },
     mounted() {
         this.getJson(`${API+this.catalogUrl}`)
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
+
                 }
             });
         this.getJson('getProducts.json')
@@ -39,6 +47,6 @@ const app = new Vue({
                     this.products.push(el);
                 }
             })
-
+        this.filtered = this.products;
     }
 })

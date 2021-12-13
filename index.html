@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">
     <title>eShop</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
-    <script src="JS/script-vue.js"></script>
+
 </head>
 
 <body>
@@ -16,16 +16,19 @@
         <header class="header">
             <div class="header__wrap container">
                 <div class="header__logo">E-shop</div>
-                <button class="cart__button" type="button">Корзина</button>
-                <div class="cart__count">
-                    <div class="cart__row cart__header">
-                        <div>Название товара</div>
-                        <div>Количество</div>
-                        <div>Цена за шт.</div>
-                        <div>Итого</div>
-                        <div>Удалить</div>
+                <form action="#" class="header__search__form">
+                    <input type="text" v-model="userSearch" class="header__search__field">
+                    <button class="header__search__btn" type="submit" @click="filter()">
+                    <svg class="header__search__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+</svg>
+                    </button>
+                </form>
+                <button @click="isVisibleCart=!isVisibleCart" class="cart__button" type="button">Корзина</button>
+                <div class="cart__count" v-bind:class="{ hidden: isVisibleCart }">
+                    <div class="cart__main">
+                        <h1 v-if="cartEmpty">Корзина пуста</h1>
                     </div>
-                    <div class="cart__main"></div>
                     <div class="cart__footer">
                         Товаров в корзине на сумму: $
                         <span class="cart__total">0</span>
@@ -35,16 +38,16 @@
         </header>
         <main>
             <div class="products__list container">
-                <div class="products__item" v-for="product of products" :key="product.id_product">
-                    <img class="products__img" :src="images/product.id_product">
-                    <h3>{{product.product_name}}</h3>
-                    <p>{{product.price}}</p>
-                    <button class="buy__btn" :data-id="prodict.id_product" @click="addProduct(product)">Купить</button>
+                <div class="products__item" v-for="product of filtered" :key="product.id_product">
+                    <img class="products__img" :src="imageCatalog">
+                    <h3>{{ product.product_name }}</h3>
+                    <p>{{ product.price }} $</p>
+                    <button class="buy__btn" @click="addProduct(product)">Купить</button>
                 </div>
             </div>
         </main>
     </div>
-
+    <script src="JS/script-vue.js"></script>
 </body>
 
 </html>
