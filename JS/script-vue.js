@@ -13,6 +13,7 @@ const app = new Vue({
         isVisibleCart: true,
         productsInCart: [],
         cartEmpty: true,
+        error:false
     },
     methods: {
         filter(value) {
