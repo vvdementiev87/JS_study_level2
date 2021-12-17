@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
     <title>eShop</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+    
 
 </head>
 
@@ -37,18 +37,12 @@
             </div>
         </header>
         <main>
-            <div class="products__list container">
-                <div class="products__item" v-for="product of filtered" :key="product.id_product">
-                    <img class="products__img" :src="imageCatalog">
-                    <h3>{{ product.product_name }}</h3>
-                    <p>{{ product.price }} $</p>
-                    <button class="buy__btn" @click="addProduct(product)">Купить</button>
-                </div>
-            </div>
+            <products :products="filtered" :img="imageCatalog" @add-product="addProduct"></products>
         </main>
     </div>
-    <script src="JS/script-vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="JS/script-component.js"></script>
+    <script src="JS/script-vue.js"></script>
 
 </body>
 

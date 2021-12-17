@@ -1,6 +1,6 @@
 Vue.component('products',{
     props:['products','img'],
-    template:`<div class="products">
+    template:`<div class="products__list container">
     <product v-for="item of products"
     :key="item.id_product"
     :img="img"

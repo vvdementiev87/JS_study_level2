@@ -39,7 +39,7 @@ const app = new Vue({
             .then(data => {
                 for (let el of data) {
                     this.products.push(el);
-
+console.log(el);
                 }
             });
         this.getJson('getProducts.json')
