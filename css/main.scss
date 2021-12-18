@@ -70,9 +70,9 @@
                 border-radius: 3px;
                 font-size: 14px;
             }
-            &__row {
+            &__item {
                 display: grid;
-                grid-template-columns: repeat(5, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 10px;
                 margin-bottom: 10px;
                 border-bottom: 1px solid #ebebeb;
@@ -103,6 +103,9 @@
                     border-color: #fafafa;
                     color: #fafafa;
                 }
+            }
+            &__img {
+                width: 30px;
             }
         }
         

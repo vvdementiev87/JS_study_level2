@@ -67,15 +67,15 @@
   border-radius: 3px;
   font-size: 14px;
 }
-.cart__row {
+.cart__item {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid #ebebeb;
   padding-bottom: 10px;
 }
-.cart__row--element {
+.cart__item--element {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,6 +100,9 @@
   background-color: transparent;
   border-color: #fafafa;
   color: #fafafa;
+}
+.cart__img {
+  width: 30px;
 }
 
 .buy__btn {
