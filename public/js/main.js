@@ -11,7 +11,7 @@ const renderLinkList = (list) => {
     document.querySelector('.menu').innerHTML = linkList.join('');
 }
 renderLinkList(menu); */
-const API = 'ahttps://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
+const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-api/master/responses';
 
 const app = new Vue({
     el: '#app',
@@ -23,7 +23,7 @@ const app = new Vue({
             return fetch(url)
                 .then(result => result.json())
                 .catch(error => {
-                    console.log(error)
+                    // console.log(error)
                     this.$refs.error.text = error;
                 })
         },

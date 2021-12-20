@@ -19,14 +19,10 @@
                         <a href="index.html" class="header__logo">
                             <img src="img/logo.png" alt="logo">
                         </a>
-                        <img src="img/search.svg" alt="search">
+                        <filter-el></filter-el>
                     </div>
                 </div>
                 <nav class="header__right">
-                    <filter-el></filter-el>
-                    <div class="cart">
-                        <cart ref="cart"></cart>
-                    </div>
                     <input class="header__check" type="checkbox" name="dropmenu" id="dropmenu">
                     <label for="dropmenu" class="header__item header__item--menu">
                     <img src="img/menu.svg" alt="menu">
@@ -34,12 +30,7 @@
                     <a href="registration.html" class="header__item header__item--registration">
                         <img src="img/user.svg" alt="registration">
                     </a>
-                    <div class="header__cart">
-                        <a href="cart.html" class="header__item header__item--cart">
-                            <img src="img/cart.svg" alt="cart">
-                        </a>
-                        <div class="header__count">5</div>
-                    </div>
+                    <cart ref="cart"></cart>
                     <div class="header__dropmenu">
                         <label for="dropmenu" class="header__closebtn">
                         <img src="img/close_btn.svg" alt="close">
