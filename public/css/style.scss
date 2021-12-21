@@ -171,6 +171,7 @@
             padding-left: 34px;
             padding-top: 16px;
             padding-right: 16px;
+            padding-bottom: 16px;
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -440,7 +441,6 @@
 }
 
 .intro {
-    margin-top: 72px;
     background-color: #F1E4E6;
     &__text {
         border-left: 12px solid #F16D7F;
