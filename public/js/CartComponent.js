@@ -88,7 +88,7 @@ Vue.component('cart', {
                 <h3>{{ this.cartItems.reduce((summ, item) => summ + item.quantity, 0) }} товара(ров)</h3>
                 <h3>ИТОГО: {{ this.cartItems.reduce((summ, item) => summ + item.quantity*item.price, 0) }} рублей </h3>
                 <cart-item v-for="item of cartItems" :key="item.id_product" :img="item.imgPath" :cart-item="item" :cart-count = "cartCount"
-                :cart-summ = "cartSumm" @remove="remove()"
+                :cart-summ = "cartSumm" @remove="remove()">
                 </cart-item>
             </div>  
         </div>
@@ -107,8 +107,8 @@ Vue.component('cart-item', {
         </div>
         <div>            
             <div class="header__cart__change">
-                <p>&#160;{{ cartItem.quantity }}&#160; шт.&#160; </p>
                 <button class="header__btn" @click="$parent.remove(cartItem)"> &times; </button>
+                <p> {{ cartItem.quantity }} шт.</p>                
             </div>           
         </div>
         <div>
