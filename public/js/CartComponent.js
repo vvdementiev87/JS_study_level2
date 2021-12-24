@@ -63,7 +63,7 @@ Vue.component('cart', {
                             find.quantity--;
                         }
                     })
-            } /* else {
+            } else {
                 console.log(item);
                 this.$parent.deleteJson(`/api/cart/${find.id_product}`, item)
                     .then(data => {
@@ -71,7 +71,7 @@ Vue.component('cart', {
                             this.cartItems.remove(item)
                         }
                     })
-            } */
+            }
         },
         cartCount() {
             return this.cartItems.reduce((summ, item) => summ + item.quantity, 0);
