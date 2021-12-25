@@ -20,7 +20,6 @@ Vue.component('cart', {
     },
     methods: {
         addProduct(item) {
-            console.log(item);
             let find = this.cartItems.find(el => el.id_product === item.id_product);
             if (find) {
                 this.$parent.putJson(`/api/cart/${find.id_product}`, { quantity: 1 })
@@ -39,24 +38,11 @@ Vue.component('cart', {
                         }
                     })
             }
-
-            /* this.$parent.getJson(`${API}/addToBasket.json`)
-                .then(data => {
-                    if (data.result === 1) {
-                        let find = this.cartItems.find(el => el.id_product === item.id_product);
-                        if (find) {
-                            find.quantity++;
-                        } else {
-                            const prod = Object.assign({ quantity: 1 }, item);
-                            this.cartItems.push(prod)
-                        }
-                    }
-                }) */
         },
         remove(item) {
             /* console.log(item); */
             let find = this.cartItems.find(el => el.id_product === item.id_product);
-            if (find.quantity > 0) {
+            if (find.quantity > 1) {
                 this.$parent.putJson(`/api/cart/${find.id_product}`, { quantity: -1 })
                     .then(data => {
                         if (data.result === 1) {
@@ -64,11 +50,10 @@ Vue.component('cart', {
                         }
                     })
             } else {
-                console.log(item);
-                this.$parent.deleteJson(`/api/cart/${find.id_product}`, item)
+                this.$parent.deleteJson(`/api/cart/${find.id_product}`, find)
                     .then(data => {
                         if (data.result === 1) {
-                            this.cartItems.remove(item)
+                            this.cartItems.splice(+this.cartItems.indexOf(find), 1)
                         }
                     })
             }
