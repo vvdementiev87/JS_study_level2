@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c45754f219.js" crossorigin="anonymous"></script>
+    <title>Cart</title>
+</head>
+
+<body class="page">
+    <header class="header">
+        <div class="container header__wrap">
+            <div class="header__left">
+                <div class="header__logo">
+                    <a href="index.html" class="header__logo">
+                        <img src="img/logo.png" alt="logo">
+                    </a>
+                    <img src="img/search.svg" alt="search">
+                </div>
+            </div>
+            <div class="header__right">
+                <input class="header__check" type="checkbox" name="dropmenu" id="dropmenu">
+                <label for="dropmenu" class="header__item header__item--menu">
+                    <img src="img/menu.svg" alt="menu">
+                </label>
+                <a href="registration.html" class="header__item header__item--registration">
+                    <img src="img/user.svg" alt="registration">
+                </a>
+                <div class="header__cart"><a href="cart.html" class="header__item header__item--cart">
+                        <img src="img/cart.svg" alt="cart">
+                    </a>
+                    <div class="header__count">5</div>
+                </div>
+                <div class="header__dropmenu">
+                    <label for="dropmenu" class="header__closebtn">
+                        <img src="img/close_btn.svg" alt="close">
+                    </label>
+                    <h1>MENU</h1>
+                    <h2>MAN</h2>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Bags</a></li>
+                        <li><a href="#">Denim</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                    </ul>
+                    <h2>WOMAN</h2>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Polos</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Shirts</a></li>
+                    </ul>
+                    <h2>KIDS</h2>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Jackets & Coats</a></li>
+                        <li><a href="#">Polos</a></li>
+                        <li><a href="#">T-Shirts</a></li>
+                        <li><a href="#">Shirts</a></li>
+                        <li><a href="#">Bags</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="navigation">
+            <div class="container navigation__wrap navigation__wrap--center">
+                <h1>SHOPPING CART</h1>
+            </div>
+        </section>
+        <selector class="container cart">
+            <div class="cart__left">
+                <div class="cart__item">
+                    <img class="cart__img cart__img--size" src="img/Product_man (6).png" alt="product img">
+                    <div class="cart__text">
+                        <h2>MANGO PEOPLE T-SHIRT</h2>
+                        <p>Price: <span>$300</span></p>
+                        <p>Color: Red</p>
+                        <p>Size: Xl</p>
+                        <div class="cart__quantity"><label for="cart__quantity">Quantity:</label><input size="1"
+                                type="number" id="cart__quantity" class="cart__quantity"></div>
+                    </div>
+                    <img class="cart__img cart__img--close" src="img/close_btn.svg" alt="close_btn">
+                </div>
+                <div class="cart__item">
+                    <img class="cart__img cart__img--size" src="img/Product_man (7).png" alt="product img">
+                    <div class="cart__text">
+                        <h2>MANGO PEOPLE T-SHIRT</h2>
+                        <p>Price: <span>$300</span></p>
+                        <p>Color: Red</p>
+                        <p>Size: Xl</p>
+                        <div class="cart__quantity"><label for="cart__quantity">Quantity:</label><input size="1"
+                                type="number" id="cart__quantity" class="cart__quantity"></div>
+                    </div>
+                    <img class="cart__img cart__img--close" src="img/close_btn.svg" alt="close_btn">
+                </div>
+                <div class="cart__wrap">
+                    <a href="/" class="cart__btn cart__btn--position">
+                        <p>CLEAR SHOPPING CART</p>
+                    </a>
+                    <a href="/" class="cart__btn cart__btn--position">
+                        <p>CONTINUE SHOPPING</p>
+                    </a>
+                </div>
+            </div>
+            <div class="cart__right">
+                <form action="#" class="cart__form">
+                    <legend>SHIPPING ADRESS</legend>
+                    <input class="cart__field" type="text" placeholder="Bangladesh">
+                    <input class="cart__field" type="text" placeholder="State">
+                    <input class="cart__field" type="text" placeholder="Postcode / Zip">
+                    <button class="cart__btn cart__btn--size">GET A QUOTE</button>
+                </form>
+                <div class="cart__proceed">
+                    <h3>SUB TOTAL $900</h3>
+                    <h2>GRAND TOTAL <span>$900</span></h2>
+                    <hr>
+                    <a href="/" class="cart__btn cart__btn--pink">
+                        <p>PROCEED TO CHECKOUT</p>
+                    </a>
+                </div>
+            </div>
+
+        </selector>
+        <section class="subscribe subscribe--margin">
+            <div class="container subscribe__wrap">
+                <article class="subscribe__item">
+                    <img src="img/Intersect.png" alt="Subscribe">
+                    <h4>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus
+                        condimentum“</h4>
+                </article>
+                <form class="subscribe__form" action="#">
+                    <label for="subscribe__field">SUBSCRIBE<br><span class="subscribe-field__label__span">FOR OUR
+                            NEWLETTER AND
+                            PROMOTION</span></label>
+
+                    <div class="subscribe__input">
+                        <input id="subscribe__field" class="subscribe__field" type="email"
+                            placeholder="Enter Your Email" required>
+                        <input class="subscribe__btn" type="submit" value="Subscribe">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <section class="container footer__wrap">
+            <div class="footer__left">
+                <p>© 2021 Brand All Rights Reserved.</p>
+            </div>
+            <div class="footer__right">
+                <a href="#" class="footer__item">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="footer__item">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="footer__item">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="footer__item">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
