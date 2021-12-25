@@ -16,6 +16,9 @@ const API = 'https://raw.githubusercontent.com/GeekBrainsTutorial/online-store-a
 const app = new Vue({
     el: '#app',
     data: {
+        cartUrl: '/getBasket.json',
+        cartItems: [],
+        imgCart: 'https://placehold.it/200x150',
         userSearch: '',
     },
     methods: {
@@ -69,6 +72,9 @@ const app = new Vue({
                     this.$refs.error.text = error;
                 })
         },
+        cartSumm() {
+            return this.cartItems.reduce((summ, item) => summ + item.quantity * item.price, 0);
+        }
 
 
     }

@@ -903,6 +903,7 @@
         }
     }
     &__details {
+        z-index: 20;
         align-self: flex-start;
         width: 100%;
         max-width: 680px;
