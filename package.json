@@ -5,14 +5,13 @@
     "scripts": {
         "build": "webpack",
         "watch": "webpack -w"
-
     },
     "keywords": [],
     "author": "",
     "license": "ISC",
     "dependencies": {
         "babel-loader": "^8.2.3",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "html-webpack-plugin": "^5.5.0",
         "moment": "^2.29.1",
         "router": "^1.3.6",
