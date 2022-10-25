@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/c45754f219.js" crossorigin="anonymous"></script>
+    <title>Index</title>
+<script defer src="./build.js"></script></head>
+
+<body>
+    <div id="app" class="page">
+        <header class="header">
+            <div class="container header__wrap">
+                <div class="header__left">
+                    <div class="header__logo">
+                        <a href="index.html" class="header__logo">
+                            <img src="img/logo.png" alt="logo">
+                        </a>
+                        <filter-el></filter-el>
+                    </div>
+                </div>
+                <nav class="header__right">
+                    <input class="header__check" type="checkbox" name="dropmenu" id="dropmenu">
+                    <label for="dropmenu" class="header__item header__item--menu">
+                    <img src="img/menu.svg" alt="menu">
+                </label>
+                    <a href="registration.html" class="header__item header__item--registration">
+                        <img src="img/user.svg" alt="registration">
+                    </a>
+                    <cart ref="cart"></cart>
+                    <div class="header__dropmenu">
+                        <label for="dropmenu" class="header__closebtn">
+                        <img src="img/close_btn.svg" alt="close">
+                    </label>
+                        <h1>MENU</h1>
+                        <h2>MAN</h2>
+                        <ul>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Bags</a></li>
+                            <li><a href="#">Denim</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                        </ul>
+                        <h2>WOMAN</h2>
+                        <ul>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                            <li><a href="#">Polos</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                        </ul>
+                        <h2>KIDS</h2>
+                        <ul>
+                            <li><a href="#">Accessories</a></li>
+                            <li><a href="#">Jackets & Coats</a></li>
+                            <li><a href="#">Polos</a></li>
+                            <li><a href="#">T-Shirts</a></li>
+                            <li><a href="#">Shirts</a></li>
+                            <li><a href="#">Bags</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="intro">
+                <div class="container intro__wrap">
+                    <div class="intro__text">
+                        <h1>THE BRAND</h1>
+                        <h3>OF LUXERIOUS <span>FASHION</span></h3>
+                    </div>
+                </div>
+            </section>
+            <section class="category">
+                <div class="container category__wrap">
+                    <a href="catalog.html" class="category__item category__item--women">
+                        <h3 class="h3__category">30% OFF</h3>
+                        <h1 class="h1__category">FOR WOMEN</h1>
+                    </a>
+                    <a href="catalog.html" class="category__item category__item--men">
+                        <h3>HOT DEAL</h3>
+                        <h1>FOR MEN</h1>
+                    </a>
+                    <a href="catalog.html" class="category__item category__item--kids">
+                        <h3>NEW ARRIVALS</h3>
+                        <h1>FOR KIDS</h1>
+                    </a>
+                    <a href="catalog.html" class="category__item category__item--accesories">
+                        <h3>LUXIROUS & TRENDY</h3>
+                        <h1>ACCESORIES</h1>
+                    </a>
+                </div>
+            </section>
+            <section class="product">
+                <error ref="error"></error>
+                <div class="container product__box">
+                    <h1>Fetured Items</h1>
+                    <h2>Shop for items based on what we featured in this week</h2>
+
+                    <products ref="products"></products>
+
+                    <a href="catalog.html" class="product__btn">
+                        <p>Browse All Product</p>
+                    </a>
+                </div>
+            </section>
+            <section class="conditions">
+                <div class="container conditions__wrap">
+                    <div class="conditions__item">
+                        <img src="img/Free delivery.svg" alt="Free delivery">
+                        <h3>Free Delivery</h3>
+                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    </div>
+                    <div class="conditions__item">
+                        <img src="img/Sales&discounts.svg" alt="Sales & discounts">
+                        <h3>Sales & discounts</h3>
+                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    </div>
+                    <div class="conditions__item">
+                        <img src="img/Quality assurance.svg" alt="Quality assurance">
+                        <h3>Quality assurance</h3>
+                        <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="container subscribe__wrap">
+                    <article class="subscribe__item">
+                        <img src="img/Intersect.png" alt="Subscribe">
+                        <h4>“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
+                        </h4>
+                    </article>
+                    <form class="subscribe__form" action="#">
+                        <label for="subscribe__field">SUBSCRIBE<br><span class="subscribe-field__label__span">FOR OUR
+                            NEWLETTER AND
+                            PROMOTION</span></label>
+
+                        <div class="subscribe__input">
+                            <input id="subscribe__field" class="subscribe__field" type="email" placeholder="Enter Your Email" required>
+                            <input class="subscribe__btn" type="submit" value="Subscribe">
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <section class="container footer__wrap">
+                <div class="footer__left">
+                    <p>© 2021 Brand All Rights Reserved.</p>
+                </div>
+                <div class="footer__right">
+                    <a href="#" class="footer__item">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer__item">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="footer__item">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="footer__item">
+                        <i class="fab fa-pinterest-p"></i>
+                    </a>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/ProductComponent.js"></script>
+    <script src="js/CartComponent.js"></script>
+    <script src="js/FilterComp.js"></script>
+    <script src="js/ErrorComp.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
